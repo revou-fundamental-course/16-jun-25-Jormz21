@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkullubangtik</title>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welkom to my kalkullubangtik</h1>
+        <p>Kalkullubangtik adalah sebuah page bikinan Josh untuk menghitung luas dan keliling bangun datar</p>
+    </header>
+    
+    <nav display="flex" style="display: grid">
+        <ul>
+            <li><a href = "#Segitiga">Segitiga</a></li>
+            <li><a href = "#Lingkaran">Lingkaran</a></li>
+            <li><a href = "#Persegi">Persegi</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="Segitiga">
+            <h2>Segitiga</h2>
+            <img src="images\Screenshot 2025-06-21 152647.png" width="800px" alt="Ini gambar segitiga">
+            <p>Untuk menghitung luas segitiga, gunakan rumus: 1/2 * alas * tinggi</p>
+            <div>
+                <label for="alas">Alas : </label>
+                <input type="number" id="alas" placeholder="Masukkan alas segitiga">
+            </div>
+            <div>
+                <label for="tinggi">Tinggi : </label>
+                <input type="number" id="Tinggi" placeholder="Masukkan tinggi segitiga">
+            </div>
+
+            <p>Untuk menghitung keliling segitiga, gunakan rumus: sisi1 + sisi2 + sisi3</p>
+        </section>
+
+        <hr>
+
+        <section id="Lingkaran">
+            <h2>Lingkaran</h2>
+            <img src="images\Screenshot 2025-06-21 160733.png" width="800px" alt="Ini gambar lingkaran">
+            <p>Untuk menghitung luas lingkaran, gunakan rumus: π * jari-jari^2</p>
+            <p>Untuk menghitung keliling lingkaran, gunakan rumus: 2 * π * jari-jari</p>
+        </section>
+
+        <hr>
+
+        <section id="Persegi">
+            <h2>Persegi</h2>
+            <p>Untuk menghitung luas persegi, gunakan rumus: sisi * sisi</p>
+            <p>Untuk menghitung keliling persegi, gunakan rumus: 4 * sisi</p>
+        </section>
+
+        <footer>&copy; 2025 Josh. All rights reserved.</footer>
+</body>
+</html>

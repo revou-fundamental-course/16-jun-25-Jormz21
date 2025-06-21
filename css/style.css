@@ -1,0 +1,51 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    text-align: center;
+    font-size : 3em;
+    background-color : #cea5ea;;
+    color: whitesmoke;
+    padding: 1px;
+}
+
+nav{
+    text-align: center;
+    font-size : 2em;
+    background-color: #edd5ff;
+    padding:24px;
+}
+
+nav ul{
+    text-align:left;
+    margin:0 auto;
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li{
+    transition: font-size 0.3s ease;
+}
+
+li:hover{
+    font-size:250%;
+}
+
+main{
+    text-align: center;
+    font-size : 2em;
+}
+
+p {
+    font-size : 40px;
+}
+
+div input{
+    font-size:50px;
+}
