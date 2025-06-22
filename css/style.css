@@ -1,20 +1,27 @@
+/* Animasi scroll saat user click link2 pada <nav> menjadi smooth */
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Audiowide' , Helvetica , sans-serif;
 }
 
 header {
+    user-select: none; /* Mencegah user ngeclick pada text dan muncul tanda | pada text di <header> */
     text-align: center;
-    font-size : 3em;
+    font-size : 4em;
     background-color : #cea5ea;;
     color: whitesmoke;
     padding: 1px;
 }
 
+header p {
+    font-size : 40px;
+}
+
 nav{
+    user-select: none;
     text-align: center;
     font-size : 2em;
     background-color: #edd5ff;
@@ -29,23 +36,66 @@ nav ul{
     text-decoration: none;
 }
 
-nav li{
+/* Durasi dan jenis transisi text pada <nav> ketika mouse sedang hover */
+nav li{ 
     transition: font-size 0.3s ease;
 }
 
+/* Perubahan ukuran text pada <nav> ketika mouse hover */
 li:hover{
     font-size:250%;
 }
 
 main{
+    user-select: none;
     text-align: center;
     font-size : 2em;
 }
 
-p {
-    font-size : 40px;
+main h2{
+    font-size:70px;
+}
+
+main p{
+    font-size : 30px;
+}
+
+img {
+    width: 400px;
+    height:400px;
 }
 
 div input{
-    font-size:50px;
+    user-select: all; /* User dapat ngeclick pada text dan muncul tanda | pada <input> untuk memasukkan angka*/
+    font-size:30px;
+    width : 400px;
+}
+
+div button{
+    font-size: 30px;
+}
+
+.section-separator{
+    height: 60px;
+    margin: 32px 0;
+    background-color : #e9d6f5;
+}
+
+.persegi-flex {
+    display:flex;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    justify-content: center;
+    max-width:1500px;
+    margin:0 auto;
+}
+
+.persegi-flex img {
+    max-width: 100%;
+    height: auto;
+}
+
+.persegi-flex > div {
+    flex: 1;
+    margin-block: -25px;
 }
