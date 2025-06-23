@@ -6,7 +6,7 @@
     <title>Kalkullubangtik</title>
 
     <!-- CSS Style -->
-    <link rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>Welcome to my kalkullubangtik</h1>
-        <p>Kalkullubangtik (kalkulator luas bangun matematik) adalah sebuah page bikinan Jormz21 untuk menghitung luas dan keliling bangun datar sederhana</p>
+        <p>Kalkullubangtik (kalkulator luas bangun matematik) adalah sebuah page sederhana yang dibuat oleh Jormz21 untuk menghitung luas dan keliling bangun datar seperti : <span id="typedText" class="typing"></span></p>
     </header>
 
     <!-- Link2 untuk mempermudah user mencari bentuk yang diinginkan -->
@@ -45,12 +45,13 @@
             </div>
             <div>
                 <label for="tinggi">Tinggi</label>
-                <input type="number" id="Tinggi" placeholder="Masukkan tinggi segitiga" min="1">
+                <input type="number" id="tinggi" placeholder="Masukkan tinggi segitiga" min="1">
             </div>
             <br>
             <div>
-                <button>Hitung luas segitiga</button>
+                <button id="hitungLuasSegitiga">Hitung luas segitiga</button>
             </div>
+            <div type="text" id="hasilLuasSegitiga"></div>
             <hr>
             <p>Kalkulator keliling segitiga</p>
             <img src="images\segitiga-sisi.png" alt="Ini gambar segitiga juga">
@@ -137,7 +138,7 @@
             </p>
             <strong>Untuk menghitung luas persegi, gunakan rumus : sisi x sisi</strong>
             <div>
-                <label for="sisi">Sisi</label>
+                <label for="sisiluas">Sisi</label>
                 <input type="number" id="sisi" placeholder="Masukkan sisi" min="1">
             </div>
             <br>
@@ -146,9 +147,19 @@
             </div>
             <br>
             <strong>Untuk menghitung keliling persegi, gunakan rumus : 4 x sisi</strong>
+            <div>
+                <label for="sisi">Sisi</label>
+                <input type="number" id="sisikeliling" placeholder="Masukkan sisi" min="1">
+            </div>
+            <br>
+            <div>
+                <button>Hitung luas persegi</button>
+            </div>
             </div>
         </section>
-
+        <br>
+        <hr class="section-separator">
         <footer>&copy; 2025 Josh. All rights reserved.</footer>
+        <script src="js\script.js"></script>
 </body>
 </html>
