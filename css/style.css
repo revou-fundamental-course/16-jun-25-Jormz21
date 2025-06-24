@@ -1,10 +1,18 @@
+* {
+    color: inherit;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
 /* Animasi scroll saat user click link2 pada <nav> menjadi smooth */
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'Bebas Neue' , Helvetica , sans-serif;
+    font-family: 'Poppins' , Helvetica , sans-serif;
+    border-radius:10px;
+    font-weight: lighter;
 }
 
 header {
@@ -89,7 +97,8 @@ div input{
 }
 
 div button{
-    font-size: 30px;
+    font-size: 70px;
+    border-radius : 20px;
 }
 
 .section-separator{
@@ -104,7 +113,7 @@ div button{
     flex-wrap:wrap;
     gap : 40px;
     justify-content: center;
-    max-width:1700px;
+    max-width:1500px;
     margin:0 auto;
 }
 
@@ -121,6 +130,10 @@ div button{
 
 #hasilLuasSegitiga, #hasilKelilingSegitiga, #hasilLuasLingkaran, #hasilKelilingLingkaran, #hasilLuasPersegi, #hasilKelilingPersegi {
     font-size: 50px;
-    margin-top: 20px;
-    color:red;
+    margin:  0 auto;
+    border: 2px solid rgb(152, 74, 231);
+    min-width: 300px;
+    max-width: 800px;
+    display: block;
+    text-align: center;
 }

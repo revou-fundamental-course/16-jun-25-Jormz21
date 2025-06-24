@@ -6,7 +6,7 @@
     <title>Kalkullubangtik</title>
 
     <!-- CSS Style -->
-    <link rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -30,7 +30,8 @@
         <!-- Segitiga -->
         <section id="Segitiga">
             <h2>Segitiga</h2>
-            <p>Kalkulator luas segitiga</p>
+
+            <h4>Kalkulator luas segitiga</h4>
             <img src="images\segitiga-alas dan tinggi.png" alt="Ini gambar segitiga">
             <br>
             <p>
@@ -51,8 +52,10 @@
             <div>
                 <button id="hitungLuasSegitiga">Hitung luas segitiga</button>
             </div>
+            <br>
             <div type="text" id="hasilLuasSegitiga"></div>
             <hr>
+
             <p>Kalkulator keliling segitiga</p>
             <img src="images\segitiga-sisi.png" alt="Ini gambar segitiga juga">
             <br>
@@ -78,8 +81,10 @@
             </div>
             <br>
             <div>
-                <button>Hitung keliling segitiga</button>
+                <button id="hitungKelilingSegitiga">Hitung keliling segitiga</button>
             </div>
+            <br>
+            <div type="text" id="hasilKelilingSegitiga"></div>
         </section>
 
         <hr class="section-separator">
@@ -87,7 +92,8 @@
         <!-- Lingkaran -->
         <section id="Lingkaran">
             <h2>Lingkaran</h2>
-            <p>Kalkulator luas lingkaran</p>
+
+            <h4>Kalkulator luas lingkaran</h4>
             <img src="images\lingkaran-jarijari.png" alt="Ini gambar lingkaran">
             <br>
             <p>
@@ -102,9 +108,12 @@
             </div>
             <br>
             <div>
-                <button>Hitung luas lingkaran</button>
+                <button id="hitungLuasLingkaran">Hitung luas lingkaran</button>
             </div>
+            <br>
+            <div type="text" id="hasilLuasLingkaran"></div>
             <hr>
+
             <p>Kalkulator keliling lingkaran</p>
             <img src="images\lingkaran-diameter.png" alt="Ini gambar lingkaran juga">
             <br>
@@ -120,8 +129,10 @@
             </div>
             <br>
             <div>
-                <button>Hitung keliling lingkaran</button>
+                <button id="hitungKelilingLingkaran">Hitung keliling lingkaran</button>
             </div>
+            <br>
+            <div type="text" id="hasilKelilingLingkaran"></div>
         </section>
 
         <hr class="section-separator">
@@ -129,7 +140,7 @@
         <!-- Persegi -->
         <section id="Persegi">
             <h2>Persegi</h2>
-            <p>Kalkulator luas & keliling persegi</p>
+            <h4>Kalkulator luas & keliling persegi</h4>
             <div class="persegi-flex">
             <img src="images\persegi-sisi.png" width="400px" alt="Ini gambar persegi">
             <div>
@@ -138,23 +149,28 @@
             </p>
             <strong>Untuk menghitung luas persegi, gunakan rumus : sisi x sisi</strong>
             <div>
-                <label for="sisiluas">Sisi</label>
-                <input type="number" id="sisi" placeholder="Masukkan sisi" min="1">
+                <label for="sisiluaspersegi">Sisi</label>
+                <input type="number" id="sisiLuasPersegi" placeholder="Masukkan sisi" min="1">
             </div>
             <br>
             <div>
-                <button>Hitung luas persegi</button>
+                <button id="hitungLuasPersegi">Hitung luas persegi</button>
             </div>
             <br>
+            <div type="text" id="hasilLuasPersegi"></div>
+            <br>
+
             <strong>Untuk menghitung keliling persegi, gunakan rumus : 4 x sisi</strong>
             <div>
-                <label for="sisi">Sisi</label>
-                <input type="number" id="sisikeliling" placeholder="Masukkan sisi" min="1">
+                <label for="sisikelilingpersegi">Sisi</label>
+                <input type="number" id="sisiKelilingPersegi" placeholder="Masukkan sisi" min="1">
             </div>
             <br>
             <div>
-                <button>Hitung luas persegi</button>
+                <button id="hitungKelilingPersegi">Hitung keliling persegi</button>
             </div>
+            <br>
+            <div type="text" id="hasilKelilingPersegi"></div>
             </div>
         </section>
         <br>
