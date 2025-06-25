@@ -11,8 +11,9 @@ html{
 
 body{
     font-family: 'Poppins' , Helvetica , sans-serif;
-    border-radius:10px;
     font-weight: lighter;
+    background-color: #f4eafb;
+    font-size: 18px;
 }
 
 header {
@@ -25,15 +26,17 @@ header {
 }
 
 header h1{
+    font-size: 2.5em;
     margin-block-end: 0px;
-    font-weight:100;
+    font-weight:1000;
 }
 
 header p {
-    font-size : 40px;
+    font-size : 0.8em;
     font-family: 'sans-serif';
 }
 
+/* efek typing */
 .typing {
     width: fit-content;
     white-space: nowrap;
@@ -42,15 +45,16 @@ header p {
     overflow: hidden;
     color:rgb(255, 255, 255);
     font-family:'Bebas Neue' , Helvetica , sans-serif;
-    font-size: 50px;
+    font-size: 1.5em;
 }
 
 nav{
     user-select: none;
     text-align: center;
-    font-size : 2em;
+    font-size : 3em;
     background-color: #edd5ff;
-    padding:24px;
+    padding:2%;
+    font-weight: 600;
 }
 
 nav ul{
@@ -58,7 +62,6 @@ nav ul{
     margin:0 auto;
     padding: 0;
     display: inline-block;
-    text-decoration: none;
 }
 
 /* Durasi dan jenis transisi text pada <nav> ketika mouse sedang hover */
@@ -74,51 +77,65 @@ li:hover{
 main{
     user-select: none;
     text-align: center;
-    font-size : 2em;
+    font-size : 3em;
 }
 
 main h2{
-    font-size:70px;
+    font-size:2em;
 }
 
 main p{
-    font-size : 30px;
+    font-size : 1px;
 }
 
 img {
-    width: 400px;
-    height:400px;
+    width: 10em;
+    height:10em;
 }
 
 div input{
     user-select: all; /* User dapat ngeclick pada text dan muncul tanda | pada <input> untuk memasukkan angka*/
-    font-size:30px;
-    width : 400px;
+    font-size:1em;
+    width : 15em;
 }
 
 div button{
-    font-size: 70px;
+    padding:1em;
+    font-size: 1em;
     border-radius : 20px;
+    color: rgb(228, 151, 240);
+    background-color: #333035;
+    border: none;
+}
+
+div button:active{
+    color: rgb(219, 201, 244);
+    background-color: #992ee6;
 }
 
 .section-separator{
     height: 60px;
-    margin: 32px 0;
     background-color : #e9d6f5;
+    width:100vw;
+    border-top: 3px solid black;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .persegi-flex {
     display:flex;
+    flex-direction: row;
     align-items:flex-start;
     flex-wrap:wrap;
     gap : 40px;
     justify-content: center;
-    max-width:1500px;
+    max-width: 2000px;;
     margin:0 auto;
 }
 
 .persegi-flex img {
-    max-width: 100%;
+    width: 10em;
+    max-width: 40vw;
     height: auto;
 }
 
@@ -128,12 +145,108 @@ div button{
     text-align:left;
 }
 
-#hasilLuasSegitiga, #hasilKelilingSegitiga, #hasilLuasLingkaran, #hasilKelilingLingkaran, #hasilLuasPersegi, #hasilKelilingPersegi {
-    font-size: 50px;
+#hasilLuasSegitiga, #hasilKelilingSegitiga, #hasilLuasLingkaran, #hasilKelilingLingkaran {
+    font-size: 1em;
     margin:  0 auto;
     border: 2px solid rgb(152, 74, 231);
-    min-width: 300px;
-    max-width: 800px;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 10px;
     display: block;
     text-align: center;
+    background-color: #cea5ea;
+    color: #333035;
+    font-weight: bold;
+}
+
+#hasilLuasSegitiga:empty, #hasilKelilingSegitiga:empty, #hasilLuasLingkaran:empty, #hasilKelilingLingkaran:empty, #hasilLuasPersegi:empty, #hasilKelilingPersegi:empty, #pembahasanLuasSegitiga:empty, #pembahasanKelilingSegitiga:empty, #pembahasanLuasLingkaran:empty, #pembahasanKelilingLingkaran:empty, #pembahasanLuasPersegi:empty, #pembahasanKelilingPersegi:empty{
+    display: none;
+}
+
+.hasil-luas-persegi{
+    display: flex;
+    align-items: flex-start;
+}
+
+.hasil-keliling-persegi{
+    display: flex;
+    align-items: flex-start;
+}
+
+#hasilLuasPersegi, #hasilKelilingPersegi {
+    justify-content: left;
+    margin:  0;
+    font-size: 1em;
+    border: 2px solid rgb(152, 74, 231);
+    min-width: 200px;
+    max-width: 500px;
+    padding: 10px;
+    text-align: center;
+    background-color: #cea5ea;
+    color:#333035;
+    font-weight: bold;
+}
+
+#pembahasanLuasSegitiga, #pembahasanKelilingSegitiga, #pembahasanLuasLingkaran, #pembahasanKelilingLingkaran, #pembahasanLuasPersegi, #pembahasanKelilingPersegi {
+    font-size: 1em;
+    margin:  0 auto;
+    border: 2px solid rgb(152, 74, 231);
+    min-width: 200px;
+    max-width: 500px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: #a945eb;
+    color: #f3e1ff;
+    font-weight: bold;
+    text-align: left;
+}
+
+#pembahasanLuasSegitiga, #pembahasanKelilingSegitiga, #pembahasanLuasLingkaran, #pembahasanKelilingLingkaran, #pembahasanLuasPersegi, #pembahasanKelilingPersegi {
+    white-space: pre-line;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1em;
+        padding: 0 2vw;
+    }
+    header {
+        font-size: 1.2em;
+        padding: 0.5em 0;
+    }
+    header h1 {
+        font-size: 1.1em;
+    }
+    nav, main, section {
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+    }
+    .persegi-flex {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    .persegi-flex img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    div input, div button {
+        width: 100%;
+        max-width: 70vw;
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    #hasilLuasSegitiga, #hasilKelilingSegitiga,
+    #hasilLuasLingkaran, #hasilKelilingLingkaran,
+    #hasilLuasPersegi, #hasilKelilingPersegi {
+        font-size: 1em;
+        min-width: 0;
+        max-width: 100vw;
+        padding: 10px;
+        margin: 8px 0;
+        word-break: break-all;
+    }
 }

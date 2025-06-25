@@ -32,11 +32,29 @@ document.getElementById('hitungLuasSegitiga').addEventListener('click', function
     const hasilLuasSegitiga = document.getElementById('hasilLuasSegitiga');
     if (alas > 0 && tinggi > 0) {
         const luasSegitiga = (alas * tinggi) / 2;
-        hasilLuasSegitiga.textContent = "Hasil : " + luasSegitiga.toFixed(2) + " satuan luas.";
+        hasilLuasSegitiga.textContent = "Hasil : " + luasSegitiga.toFixed(2) + " satuan.";
+        pembahasanLuasSegitiga.textContent = 
+        "Pembahasan:\n" +
+        "L = 1/2 * a * t\n" +
+        "L = 1/2 * " + alas + " * " + tinggi + "\n" +
+        "L = " + luasSegitiga.toFixed(2) + " satuan.";
     } else {
-        hasilLuasSegitiga.textContent = "Masukkan nilai alas dan tinggi yang valid.";
+        hasilLuasSegitiga.textContent = "Masukkan nilai alas dan tinggi yang valid!";
     }
 })
+// hapus pembahasan jika input kosong
+const alasInput = document.getElementById('alas');
+const tinggiInput = document.getElementById('tinggi');
+const pembahasanLuasSegitiga = document.getElementById('pembahasanLuasSegitiga');
+
+function clearPembahasanLuasSegitigaIfEmpty() {
+    if (!alasInput.value || !tinggiInput.value) {
+        pembahasanLuasSegitiga.textContent = "";
+        document.getElementById('hasilLuasSegitiga').textContent = "";
+    }
+}
+alasInput.addEventListener('input', clearPembahasanLuasSegitigaIfEmpty);
+tinggiInput.addEventListener('input', clearPembahasanLuasSegitigaIfEmpty);
 
 // Kalkulator keliling segitiga
 document.getElementById('hitungKelilingSegitiga').addEventListener('click', function() {
@@ -47,10 +65,29 @@ document.getElementById('hitungKelilingSegitiga').addEventListener('click', func
     if (sisi1 > 0 && sisi2 > 0 && sisi3 > 0) {
         const kelilingSegitiga = sisi1 + sisi2 + sisi3;
         hasilKelilingSegitiga.textContent = "Hasil : " + kelilingSegitiga.toFixed(2) + " satuan.";
+        pembahasanKelilingSegitiga.textContent = 
+        "Pembahasan:\n" +
+        "K = s1 + s2 + s3\n" +
+        "K = " + sisi1 + " + " + sisi2 + " + " + sisi3 + "\n" +
+        "K = " + kelilingSegitiga.toFixed(2) + " satuan.";
     } else {
-        hasilKelilingSegitiga.textContent = "Masukkan nilai setiap sisi yang valid.";
+        hasilKelilingSegitiga.textContent = "Masukkan nilai setiap sisi yang valid!";
     }
 })
+const sisi1Input = document.getElementById('sisi1');
+const sisi2Input = document.getElementById('sisi2');
+const sisi3Input = document.getElementById('sisi3');
+const pembahasanKelilingSegitiga = document.getElementById('pembahasanKelilingSegitiga');
+
+function clearPembahasanKelilingSegitigaIfEmpty() {
+    if (!sisi1Input.value || !sisi2Input.value || !sisi3Input.value) {
+        pembahasanKelilingSegitiga.textContent = "";
+        document.getElementById('hasilKelilingSegitiga').textContent = "";
+    }
+}
+sisi1Input.addEventListener('input', clearPembahasanKelilingSegitigaIfEmpty);
+sisi2Input.addEventListener('input', clearPembahasanKelilingSegitigaIfEmpty);
+sisi3Input.addEventListener('input', clearPembahasanKelilingSegitigaIfEmpty);
 
 // Kalkulator luas lingkaran
 document.getElementById('hitungLuasLingkaran').addEventListener('click', function() {
@@ -59,10 +96,25 @@ document.getElementById('hitungLuasLingkaran').addEventListener('click', functio
     if (jarijari > 0) {
         const luasLingkaran = 3.14 * jarijari * jarijari;
         hasilLuasLingkaran.textContent = "Hasil : " + luasLingkaran.toFixed(2) + " satuan.";
+        pembahasanLuasLingkaran.textContent = 
+        "Pembahasan:\n" +
+        "L = π * r²\n" +
+        "L = 3.14 * " + jarijari + "²\n" +
+        "L = " + luasLingkaran.toFixed(2) + " satuan.";
     } else {
-        hasilLuasLingkaran.textContent = "Masukkan nilai jari-jari yang valid.";
+        hasilLuasLingkaran.textContent = "Masukkan nilai jari-jari yang valid!";
     }
 })
+const jarijariInput = document.getElementById('jarijari');
+const pembahasanLuasLingkaran = document.getElementById('pembahasanLuasLingkaran');
+
+function clearPembahasanLuasLingkaranIfEmpty() {
+    if (!jarijariInput.value) {
+        pembahasanLuasLingkaran.textContent = "";
+        document.getElementById('hasilLuasLingkaran').textContent = "";
+    }
+}
+jarijariInput.addEventListener('input', clearPembahasanLuasLingkaranIfEmpty);
 
 // Kalkulator keliling lingkaran
 document.getElementById('hitungKelilingLingkaran').addEventListener('click', function() {
@@ -71,10 +123,25 @@ document.getElementById('hitungKelilingLingkaran').addEventListener('click', fun
     if (diameter > 0) {
         const kelilingLingkaran = 3.14 * diameter;
         hasilKelilingLingkaran.textContent = "Hasil : " + kelilingLingkaran.toFixed(2) + " satuan.";
+        pembahasanKelilingLingkaran.textContent = 
+        "Pembahasan:\n" +
+        "K = π * d\n" +
+        "K = 3.14 * " + diameter + "\n" +
+        "K = " + kelilingLingkaran.toFixed(2) + " satuan.";
     } else {
-        hasilKelilingLingkaran.textContent = "Masukkan nilai diameter yang valid.";
+        hasilKelilingLingkaran.textContent = "Masukkan nilai diameter yang valid!";
     }
 })
+const diameterInput = document.getElementById('diameter');
+const pembahasanKelilingLingkaran = document.getElementById('pembahasanKelilingLingkaran');
+
+function clearPembahasanKelilingLingkaranIfEmpty() {
+    if (!diameterInput.value) {
+        pembahasanKelilingLingkaran.textContent = "";
+        document.getElementById('hasilKelilingLingkaran').textContent = "";
+    }
+}
+diameterInput.addEventListener('input', clearPembahasanKelilingLingkaranIfEmpty);
 
 // Kalkulator luas persegi
 document.getElementById('hitungLuasPersegi').addEventListener('click', function() {
@@ -83,10 +150,25 @@ document.getElementById('hitungLuasPersegi').addEventListener('click', function(
     if (sisiluas > 0) {
         const luasPersegi = sisiluas * sisiluas;
         hasilLuasPersegi.textContent = "Hasil : " + luasPersegi.toFixed(2) + " satuan.";
+        pembahasanLuasPersegi.textContent = 
+        "Pembahasan:\n" +
+        "L = s²\n" +
+        "L = " + sisiluas + "²\n" +
+        "L = " + luasPersegi.toFixed(2) + " satuan.";
     } else {
-        hasilLuasPersegi.textContent = "Masukkan nilai sisi persegi yang valid.";
+        hasilLuasPersegi.textContent = "Masukkan nilai sisi persegi yang valid!";
     }
 })
+const sisiluasInput = document.getElementById('sisiLuasPersegi');
+const pembahasanLuasPersegi = document.getElementById('pembahasanLuasPersegi');
+
+function clearPembahasanLuasPersegiIfEmpty() {
+    if (!sisiluasInput.value) {
+        pembahasanLuasPersegi.textContent = "";
+        document.getElementById('hasilLuasPersegi').textContent = "";
+    }
+}
+sisiluasInput.addEventListener('input', clearPembahasanLuasPersegiIfEmpty);
 
 // Kalkulator keliling persegi
 document.getElementById('hitungKelilingPersegi').addEventListener('click', function() {
@@ -95,7 +177,22 @@ document.getElementById('hitungKelilingPersegi').addEventListener('click', funct
     if (sisikeliling > 0) {
         const kelilingPersegi = 4 * sisikeliling;
         hasilKelilingPersegi.textContent = "Hasil : " + kelilingPersegi.toFixed(2) + " satuan.";
+        pembahasanKelilingPersegi.textContent =
+        "Pembahasan:\n" +
+        "K = 4 * s\n" +
+        "K = 4 * " + sisikeliling + "\n" +
+        "K = " + kelilingPersegi.toFixed(2) + " satuan.";
     } else {
-        hasilKelilingPersegi.textContent = "Masukkan nilai sisi persegi yang valid.";
+        hasilKelilingPersegi.textContent = "Masukkan nilai sisi persegi yang valid!";
     }
 })
+const sisiKelilingInput = document.getElementById('sisiKelilingPersegi');
+const pembahasanKelilingPersegi = document.getElementById('pembahasanKelilingPersegi');
+
+function clearPembahasanKelilingPersegiIfEmpty() {
+    if (!sisiKelilingInput.value) {
+        pembahasanKelilingPersegi.textContent = "";
+        document.getElementById('hasilKelilingPersegi').textContent = "";
+    }
+}
+sisiKelilingInput.addEventListener('input', clearPembahasanKelilingPersegiIfEmpty);

@@ -34,26 +34,30 @@
             <h4>Kalkulator luas segitiga</h4>
             <img src="images\segitiga-alas dan tinggi.png" alt="Ini gambar segitiga">
             <br>
-            <p>
+            <p class="penamaan">
                 a = alas
                 <br>
                 t = tinggi
             </p>
-            <strong>Untuk menghitung luas segitiga, gunakan rumus : 1/2 x alas x tinggi</strong>
+            <strong>Untuk menghitung luas segitiga, gunakan rumus : 1/2 x alas x tinggi</strong> <!--strong supaya didetect SEO-->
             <div>
-                <label for="alas">Alas</label>
+                <label for="alas">Alas : </label>
                 <input type="number" id="alas" placeholder="Masukkan alas segitiga" min="1">
             </div>
             <div>
-                <label for="tinggi">Tinggi</label>
-                <input type="number" id="tinggi" placeholder="Masukkan tinggi segitiga" min="1">
+                <label for="tinggi">Tinggi : </label>
+                <input type="number" id="tinggi" placeholder="Masukkan tinggi segitiga" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungLuasSegitiga">Hitung luas segitiga</button>
+                <button id="hitungLuasSegitiga">Klik disini untuk hitung luas segitiga</button>
             </div>
             <br>
+            <!-- tampilkan hasil perhitungan -->
             <div type="text" id="hasilLuasSegitiga"></div>
+            <br>
+            <!-- tampilkan pembahasan -->
+            <div type="text" id="pembahasanLuasSegitiga"></div>
             <hr>
 
             <p>Kalkulator keliling segitiga</p>
@@ -68,23 +72,25 @@
             </p>
             <strong>Untuk menghitung keliling segitiga, jumlahkan semua sisi pada segitiga : sisi1 + sisi2 + sisi3</strong>
             <div>
-                <label for="sisi1">Sisi 1</label>
-                <input type="number" id="sisi1" placeholder="Masukkan sisi 1 (s1)" min="1">
+                <label for="sisi1">Sisi 1 : </label>
+                <input type="number" id="sisi1" placeholder="Masukkan sisi 1" min="1" required>
             </div>
             <div>
-                <label for="sisi1">Sisi 2</label>
-                <input type="number" id="sisi2" placeholder="Masukkan sisi 2 (s2)" min="1">
+                <label for="sisi1">Sisi 2 : </label>
+                <input type="number" id="sisi2" placeholder="Masukkan sisi 2" min="1" required>
             </div>
             <div>
-                <label for="sisi3">Sisi 3</label>
-                <input type="number" id="sisi3" placeholder="Masukkan sisi 3 (s3)" min="1">
+                <label for="sisi3">Sisi 3 : </label>
+                <input type="number" id="sisi3" placeholder="Masukkan sisi 3" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungKelilingSegitiga">Hitung keliling segitiga</button>
+                <button id="hitungKelilingSegitiga">Klik disini untuk hitung keliling segitiga</button>
             </div>
             <br>
             <div type="text" id="hasilKelilingSegitiga"></div>
+            <br>
+            <div type="text" id="pembahasanKelilingSegitiga"></div>
         </section>
 
         <hr class="section-separator">
@@ -103,18 +109,20 @@
             </p>
             <strong>Untuk menghitung luas lingkaran, gunakan rumus : π x jari-jari^2</strong>
             <div>
-                <label for="jarijari">Jari-jari</label>
-                <input type="number" id="jarijari" placeholder="Masukkan jari-jari" min="1">
+                <label for="jarijari">Jari-jari : </label>
+                <input type="number" id="jarijari" placeholder="Masukkan jari-jari" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungLuasLingkaran">Hitung luas lingkaran</button>
+                <button id="hitungLuasLingkaran">Klik disini untuk hitung luas lingkaran</button>
             </div>
             <br>
             <div type="text" id="hasilLuasLingkaran"></div>
+            <br>
+            <div type="text" id="pembahasanLuasLingkaran"></div>
             <hr>
 
-            <p>Kalkulator keliling lingkaran</p>
+            <h4>Kalkulator keliling lingkaran</h4>
             <img src="images\lingkaran-diameter.png" alt="Ini gambar lingkaran juga">
             <br>
             <p>
@@ -124,15 +132,17 @@
             </p>
             <strong>Untuk menghitung keliling lingkaran, gunakan rumus : π x diameter</strong>
             <div>
-                <label for="diameter">Diameter</label>
-                <input type="number" id="diameter" placeholder="Masukkan diameter" min="1">
+                <label for="diameter">Diameter : </label>
+                <input type="number" id="diameter" placeholder="Masukkan diameter" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungKelilingLingkaran">Hitung keliling lingkaran</button>
+                <button id="hitungKelilingLingkaran">Klik disini untuk hitung keliling lingkaran</button>
             </div>
             <br>
             <div type="text" id="hasilKelilingLingkaran"></div>
+            <br>
+            <div type="text" id="pembahasanKelilingLingkaran"></div>
         </section>
 
         <hr class="section-separator">
@@ -141,36 +151,43 @@
         <section id="Persegi">
             <h2>Persegi</h2>
             <h4>Kalkulator luas & keliling persegi</h4>
+            <!-- karena menghitung luas & keliling persegi hanya membutuhkan sisi, gambar dan form kalkulator dibuat bersebelahan -->
             <div class="persegi-flex">
-            <img src="images\persegi-sisi.png" width="400px" alt="Ini gambar persegi">
+            <img src="images\persegi-sisi.png" alt="Ini gambar persegi">
             <div>
             <p>
                s = sisi (panjang dari satu titik persegi ke titik lain yang berada pada garis yang sama)
             </p>
             <strong>Untuk menghitung luas persegi, gunakan rumus : sisi x sisi</strong>
             <div>
-                <label for="sisiluaspersegi">Sisi</label>
-                <input type="number" id="sisiLuasPersegi" placeholder="Masukkan sisi" min="1">
+                <label for="sisiluaspersegi">Sisi : </label>
+                <input type="number" id="sisiLuasPersegi" placeholder="Masukkan sisi" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungLuasPersegi">Hitung luas persegi</button>
+                <button id="hitungLuasPersegi">Klik disini untuk hitung luas persegi</button>
             </div>
             <br>
-            <div type="text" id="hasilLuasPersegi"></div>
-            <br>
+            <div class="hasil-luas-persegi">
+                <div type="text" id="hasilLuasPersegi"></div>
+                <br>
+                <div type="text" id="pembahasanLuasPersegi"></div>
+            </div>
 
             <strong>Untuk menghitung keliling persegi, gunakan rumus : 4 x sisi</strong>
             <div>
-                <label for="sisikelilingpersegi">Sisi</label>
-                <input type="number" id="sisiKelilingPersegi" placeholder="Masukkan sisi" min="1">
+                <label for="sisikelilingpersegi">Sisi : </label>
+                <input type="number" id="sisiKelilingPersegi" placeholder="Masukkan sisi" min="1" required>
             </div>
             <br>
             <div>
-                <button id="hitungKelilingPersegi">Hitung keliling persegi</button>
+                <button id="hitungKelilingPersegi">Klik disini untuk hitung keliling persegi</button>
             </div>
             <br>
-            <div type="text" id="hasilKelilingPersegi"></div>
+            <div class="hasil-keliling-persegi">
+                <div type="text" id="hasilKelilingPersegi"></div>
+                <br>
+                <div type="text" id="pembahasanKelilingPersegi"></div>
             </div>
         </section>
         <br>
