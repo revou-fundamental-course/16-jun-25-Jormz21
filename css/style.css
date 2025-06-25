@@ -206,6 +206,7 @@ div button:active{
     white-space: pre-line;
 }
 
+/* untuk device dengan ukuran lebih kecil diberi tampilan berbeda */
 @media (max-width: 600px) {
     body {
         font-size: 1em;
